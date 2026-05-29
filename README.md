@@ -119,4 +119,14 @@ olist_order_payments_dataset.csv
 
 **Target Variable:** `delivery_time` = `order_delivered_customer_date` − `order_purchase_timestamp` (in days)
 
+### How to Get API Keys
+
+| API | Link |
+|-----|------|
+| Google Gemini | https://aistudio.google.com/app/apikey |
+| Google Maps Distance Matrix | https://console.cloud.google.com/ |
+| OpenWeatherMap | https://openweathermap.org/api |
+
+### model 
+https://logistics-model-528414856505.us-central1.run.app/
 
