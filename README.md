@@ -52,4 +52,57 @@
 | **Dijkstra's Algorithm** | `UI.py` | Shortest path between cities using predicted travel times |
 | **TSP (Travelling Salesman Problem)** | `UI.py` | Optimal ordering of multi-stop deliveries |
 | **Nearest Neighbor Heuristic** | `UI.py` | Fast approximation for TSP with many stops (>10) |
-  
+
+### Infrastructure
+| Tool | Purpose |
+|-----|---------|
+| `Docker` | Containerized deployment |
+| `Flask` | Backend API layer |
+| `requests` | HTTP calls to external APIs |
+
+---
+
+## 🤖 ML Model Details
+
+**Model:** `RandomForestRegressor`
+
+**Task:** Regression — predict delivery time in days
+
+**Training File:** `train.py`
+
+### Features Used
+
+| Feature | Description |
+|--------|-------------|
+| `distance` | Absolute distance between seller & customer zip codes |
+| `traffic_delay` | `distance × traffic coefficient` per transport mode |
+| `traffic_level` | Normalized traffic ratio |
+| `weight` | Product weight in kg (converted from grams) |
+| `price` | Product price in INR |
+| `freight` | Freight value |
+| `payment` | Total payment value |
+| `departure_hour` | Hour of order purchase (0–23) |
+| `priority` | Delivery priority level (1–3) |
+| `mode` | Transport mode encoded: Road=1, Rail=2, Sea=3 |
+
+### Hyperparameters
+
+```python
+RandomForestRegressor(
+    n_estimators=150,
+    max_depth=20,
+    min_samples_split=10,
+    min_samples_leaf=4,
+    random_state=42,
+    n_jobs=-1
+)
+```
+
+### Mode Multipliers
+
+| Mode | Traffic Rate | Speed Factor |
+|------|-------------|--------------|
+| Road | 0.15 | 1.0× |
+| Rail | 0.05 | 1.2× (faster) |
+| Sea  | 0.02 | 0.8× (slower) |
+
