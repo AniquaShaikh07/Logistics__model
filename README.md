@@ -106,3 +106,17 @@ RandomForestRegressor(
 | Rail | 0.05 | 1.2× (faster) |
 | Sea  | 0.02 | 0.8× (slower) |
 
+**Files Used:**
+
+```
+olist_orders_dataset.csv
+olist_order_items_dataset.csv
+olist_products_dataset.csv
+olist_sellers_dataset.csv
+olist_customers_dataset.csv
+olist_order_payments_dataset.csv
+```
+
+**Target Variable:** `delivery_time` = `order_delivered_customer_date` − `order_purchase_timestamp` (in days)
+
+
