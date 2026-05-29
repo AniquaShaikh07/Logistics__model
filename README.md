@@ -13,4 +13,29 @@
 - [How to Run](#-how-to-run)
 - [Docker Setup](#-docker-setup)
 
+  ## ✨ Live Demo Features
+| Feature | Description |
+|--------|-------------|
+| 🗺️ Route Optimizer | Enter source, destination & stops — get optimal route instantly |
+| 🚛 Mode Comparison | Compares Road, Rail, and Sea delivery time side-by-side |
+| 🤖 AI Explanation | Gemini AI explains why a specific route/mode is recommended |
+| 📊 Analytics Dashboard | Charts for delivery trends, mode distribution, top routes |
+| 💬 AI Assistant | Chat interface powered by Google Gemini for logistics queries |
+| 🗓️ Delivery Scheduler | Plan shipments with date and time predictions |
+| 🔗 Google Maps Link | One-click open-in-maps for the full optimized route |
+
+## 🛠️ Tech Stack & APIs Used
+### Machine Learning
+| Library | Purpose |
+|--------|---------|
+| `scikit-learn` | RandomForestRegressor for delivery time prediction |
+| `pandas` | Data loading, merging, and feature engineering |
+| `numpy` | Numerical computation and synthetic feature generation |
+| `joblib` | Saving and loading trained model (`model.pkl`, `features.pkl`) |
+
+### Web UI & Visualization
+| Library | Purpose |
+|--------|---------|
+| `streamlit` | Full web application UI with sidebar navigation |
+| `plotly` | Interactive charts — pie, bar, line graphs for analytics |
   
