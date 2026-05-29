@@ -127,6 +127,6 @@ olist_order_payments_dataset.csv
 | Google Maps Distance Matrix | https://console.cloud.google.com/ |
 | OpenWeatherMap | https://openweathermap.org/api |
 
-### model 
+### Model 
 https://logistics-model-528414856505.us-central1.run.app/
 
